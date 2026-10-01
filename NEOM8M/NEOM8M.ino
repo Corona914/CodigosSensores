@@ -55,6 +55,6 @@ void loop() {
   // Pequeña alerta por si el cableado falla durante la ejecución
   if (millis() > 5000 && gps.charsProcessed() < 10) {
     Serial.println(F("No se detectan datos del GPS. Revisa el cableado."));
-    while(true);
+    delay(1000);
   }
 }
